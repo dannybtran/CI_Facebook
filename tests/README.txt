@@ -1,0 +1,1 @@
+To run these tests install PHPUnit and run "phpunit all_tests.php" from the command line.
