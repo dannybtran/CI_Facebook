@@ -1,7 +1,7 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 /*
- * Make sure the config vars in your config.php match these.
+ * Merge these values into your config.php file.
  */
 
 $config['uri_protocol']	= "PATH_INFO";
