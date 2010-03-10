@@ -92,7 +92,7 @@ class facebook_test extends PHPUnit_Framework_TestCase
 		$controller = "welcome";
 		$method = "about";
 		$controllers = array(
-			"welcome" => "*"
+			"welcome" => array("*")
 		);
 				
 		$fb->require_fb_login($controller,$method,$controllers);
@@ -183,25 +183,6 @@ class facebook_test extends PHPUnit_Framework_TestCase
 		);
 				
 		$fb->require_fb_login($controller,$method,$controllers);
-	}
-
-	public function test_add_user_to_db() {
-		$facebook_id = 1123581321;
-		$user_mock = $this->getMock('facebook_User_model_mock',array('create'));
-		$user_mock->expects($this->once())
-			->method('create');			
-		$load_mock = $this->getMock('facebook_Loader_mock',array('view','model'));
-		$load_mock->expects($this->once())
-			->method('model');
-
-		$ci_mock = $this->getMock('facebook_ci_mock',array('session','user','load'));
-		$ci_mock->user = $user_mock;
-		$ci_mock->load = $load_mock;
-				
-		$fb = new facebook_mock_b();			
-		$fb->ci = $ci_mock;
-			
-		$fb->add_user_to_db_test($facebook_id);		
 	}
 }
 
