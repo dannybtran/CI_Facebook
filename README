@@ -1,0 +1,9 @@
+CI_Facebook is a Facebook Library for CodeIgniter.
+
+Simply copy/merge all the files into the corresponding locations and setup config/facebook.php.
+
+There are unit tests written for each function/class.  You will need PHPUnit to execute them.
+
+Accessing the Facebook object is easy since the hook is auto-loading it.
+
+e.g. $user_data = $this->facebook->fb->api_client->fql_query("select name from user where uid = TARGETUSERID");
