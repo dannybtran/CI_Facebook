@@ -7,3 +7,5 @@ There are unit tests written for each function/class.  You will need PHPUnit to 
 Accessing the Facebook object is easy since the hook is auto-loading it.
 
 e.g. $user_data = $this->facebook->fb->api_client->fql_query("select name from user where uid = TARGETUSERID");
+
+Please note : this is old facebook api if you have any qureies see facebook documentation.
